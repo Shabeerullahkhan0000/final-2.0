@@ -1,0 +1,168 @@
+@tailwind components;
+
+@layer components {
+  /* BUTTONS */
+  .btn {
+    @apply inline-flex items-center gap-2 border px-4 py-2 text-base font-medium rounded-md border-transparent cursor-pointer transition-base outline-none leading-tight;
+    font-family: var(--font-ui);
+  }
+  .btn-primary {
+    @apply bg-accent text-white border-transparent;
+  }
+  .btn-primary:hover {
+    @apply bg-accent-hover;
+  }
+  .btn-primary:active {
+    @apply scale-97;
+  }
+  .btn-ghost {
+    @apply text-secondary bg-transparent border-transparent;
+  }
+  .btn-ghost:hover {
+    @apply bg-elevated text-primary border-default;
+  }
+  .btn-danger {
+    @apply bg-danger text-white border-transparent;
+  }
+  .btn-danger:hover {
+    @apply bg-danger/90;
+  }
+  .btn-icon {
+    @apply w-8 h-8 p-0 rounded-md text-secondary transition-all;
+  }
+  .btn-icon:hover {
+    @apply bg-elevated text-primary border border-default;
+  }
+  .btn-icon:active {
+    @apply scale-95;
+  }
+  .btn-icon-active {
+    @apply text-accent bg-accent-subtle border-accent;
+  }
+
+  /* INPUTS */
+  .input {
+    @apply w-full px-3 py-2 text-base rounded-md border border-default bg-input text-primary transition-border;
+    font-family: var(--font-ui);
+  }
+  .input:focus {
+    @apply border-accent shadow-accent outline-none;
+  }
+  .input-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* PANELS */
+  .panel {
+    @apply flex flex-col bg-surface border-r border-subtle overflow-hidden;
+  }
+  .panel-section {
+    @apply p-4 border-b border-subtle;
+  }
+  .panel-header {
+    @apply text-base font-semibold text-secondary uppercase tracking-wider mb-3;
+    letter-spacing: 0.08em;
+    font-family: var(--font-ui);
+  }
+
+  /* GLASS PANEL */
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--radius-lg);
+  }
+
+  /* TOOLBAR */
+  .toolbar {
+    @apply h-[var(--toolbar-height)] bg-surface border-b border-subtle flex items-center p-0 px-3 gap-1 z-[var(--z-toolbar)];
+  }
+  .toolbar-separator {
+    @apply w-px h-5 bg-border-default mx-2;
+  }
+
+  /* TOOLTIPS */
+  .tooltip {
+    @apply bg-elevated border border-default rounded-md px-3 py-2 text-sm text-primary shadow-lg pointer-events-none whitespace-nowrap z-[var(--z-tooltip)];
+    font-family: var(--font-ui);
+  }
+  .tooltip-shortcut {
+    @apply font-mono text-xs text-secondary bg-overlay border border-default rounded px-2 ml-2 py-px inline;
+    font-family: var(--font-mono);
+  }
+
+  /* BADGES */
+  .badge {
+    @apply inline-flex items-center px-2 py-px rounded-full text-xs font-medium;
+    font-family: var(--font-ui);
+  }
+  .badge-free {
+    @apply text-plan-free bg-plan-free/10 border border-plan-free/30;
+  }
+  .badge-essential {
+    @apply text-plan-essential bg-plan-essential/10 border border-plan-essential/30;
+  }
+  .badge-performance {
+    @apply text-plan-performance bg-plan-performance/10 border border-plan-performance/30;
+  }
+  .badge-enterprise {
+    @apply text-plan-enterprise bg-plan-enterprise/10 border border-plan-enterprise/30;
+  }
+
+  /* STATUS BAR */
+  .statusbar {
+    @apply h-[var(--statusbar-height)] bg-surface border-t border-subtle flex items-center px-3 gap-4 text-xs text-secondary font-mono;
+    font-family: var(--font-mono);
+  }
+
+  /* DROPDOWNS */
+  .dropdown {
+    @apply bg-elevated border border-default rounded-lg shadow-xl overflow-hidden z-[var(--z-dropdown)];
+  }
+  .dropdown-item {
+    @apply px-4 py-2 text-base text-primary cursor-pointer flex items-center gap-3 transition-bg hover:bg-overlay;
+  }
+  .dropdown-item-danger {
+    @apply text-danger hover:bg-danger-subtle;
+  }
+
+  /* MODALS */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/70 backdrop-blur-sm z-[var(--z-modal)] flex items-center justify-center p-6;
+  }
+  .modal {
+    @apply bg-elevated border border-default rounded-2xl shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto;
+  }
+  .modal-header {
+    @apply p-6 border-b border-subtle flex items-center justify-between;
+  }
+  .modal-body {
+    @apply p-6;
+  }
+  .modal-footer {
+    @apply p-6 pt-4 border-t border-subtle flex justify-end gap-3;
+  }
+
+  /* TOASTS */
+  .toast {
+    @apply bg-elevated border border-default rounded-lg p-4 shadow-xl flex items-center gap-3 text-base text-primary min-w-[280px];
+  }
+
+  /* SCROLLABLE AREAS */
+  .scrollable {
+    @apply overflow-y-auto scrollbar-thin flex-1;
+  }
+
+  /* MEASUREMENT ANNOTATION CLASSES */
+  .measure-label {
+    @apply font-mono text-sm font-semibold bg-[rgba(245,158,11,0.1)] border border-[rgba(245,158,11,0.3)] rounded p-[2px] px-2;
+    color: var(--measure-color);
+    font-family: var(--font-mono);
+  }
+  .measure-label-selected {
+    color: var(--measure-selected);
+    background: rgba(59,130,246,0.1);
+    border-color: rgba(59,130,246,0.4);
+  }
+}
