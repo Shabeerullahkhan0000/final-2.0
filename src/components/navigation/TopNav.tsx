@@ -1,6 +1,4 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import MobileMenu from './MobileMenu';
+import { useState } from 'react';\nimport { Link, useLocation } from 'react-router-dom';\nimport MobileMenu from './MobileMenu';\nimport { Logo } from '../brand';
 
 interface TopNavProps {
   variant?: 'public' | 'app';
@@ -17,12 +15,9 @@ export default function TopNav({ variant = 'public' }: TopNavProps) {
       <nav className="toolbar bg-surface border-b border-subtle shadow-sm sticky top-0 z-[var(--z-toolbar)] backdrop-blur-sm">
         <div className="flex items-center justify-between h-full w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <Link to={isApp ? '/dashboard' : '/'} className="flex items-center gap-2 text-xl font-semibold text-primary hover:opacity-80 transition-base">
-            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 .68 0 1.36-.09 2-.26V13c0-1.38.47-2.56 1.25-3.5.75-.94 1.75-1.5 2.75-1.5s2  .56 2.75 1.5c .78 .94 1.25 2.12 1.25 3.5v9.74c-.64.17-1.32.26-2 .26 -5.16-1.26 -9 -5.45 -9 -11V7z"/>
-            </svg>
-            <span>CAD Viewer Pro</span>
-          </Link>
+            <Link to={isApp ? '/dashboard' : '/'} className="flex items-center gap-2 hover:opacity-80 transition-base">
+              <Logo size="md" />
+            </Link>
 
           {/* Nav links - public only */}
           {!isApp && (

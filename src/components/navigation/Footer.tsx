@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';\nimport { Logo } from '../brand';
 
 export default function Footer() {
   return (
@@ -8,11 +8,8 @@ export default function Footer() {
           
           {/* Column 1 — Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4 text-lg font-semibold text-primary">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 .68 0 1.36-.09 2-.26V13c0-1.38 .47-2.56 1.25-3.5 .75-.94 1.75-1.5 2.75-1.5s2 .56 2.75 1.5c .78 .94 1.25 2.12 1.25 3.5v9.74c-.64 .17-1.32 .26-2 .26 -5.16-1.26 -9-5.45 -9-11V7z"/>
-              </svg>
-              CAD Viewer Pro
+            <div className="mb-4">
+              <Logo size="lg" showTagline />
             </div>
             <p className="text-secondary mb-6 max-w-xs leading-relaxed">
               Professional CAD viewing in your browser
