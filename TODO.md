@@ -1,43 +1,23 @@
-# Section 03 - Site Architecture & Pages Progress
+components.css:1  Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+# Project TODO Tracker
 
-- [x] Install react-router-dom + types
-- [x] src/hooks/useDocumentTitle.ts
-- [x] src/router/index.tsx (partial)
-- [x] src/layouts/PublicLayout.tsx
-- [x] src/layouts/AppLayout.tsx (needs AppSidebar)
-- [x] src/layouts/AdminLayout.tsx (needs AdminSidebar)
-- [x] src/layouts/ViewerLayout.tsx
-- [x] src/components/navigation/TopNav.tsx
-- [x] src/components/navigation/Footer.tsx
-- [x] src/components/navigation/MobileMenu.tsx
-- [x] pages/HomePage.tsx
-- [x] pages/FeaturesPage.tsx
-- [x] pages/PricingPage.tsx
-- [ ] pages/AboutPage.tsx
-- [ ] pages/FAQPage.tsx
-- [ ] pages/BlogIndexPage.tsx
-- [ ] pages/BlogPostPage.tsx
-- [ ] pages/DownloadPage.tsx
-- [ ] pages/PrivacyPage.tsx
-- [ ] pages/TermsPage.tsx
-- [ ] pages/seo/DWGViewerPage.tsx
-- [ ] pages/seo/DXFViewerPage.tsx
-- [ ] pages/seo/MeasurementToolPage.tsx
-- [ ] pages/seo/OnlineCADViewerPage.tsx
-- [ ] pages/app/DashboardPage.tsx
-- [ ] pages/app/ViewerPage.tsx (uses ViewerCanvas)
-- [ ] pages/app/SettingsPage.tsx
-- [ ] pages/app/BillingPage.tsx
-- [ ] pages/admin/AdminDashboard.tsx
-- [ ] pages/admin/AdminUsers.tsx
-- [ ] pages/admin/AdminPayments.tsx
-- [ ] pages/admin/AdminAnalytics.tsx
-- [ ] pages/admin/AdminContent.tsx
-- [ ] pages/admin/AdminSupport.tsx
-- [ ] pages/NotFoundPage.tsx
-- [ ] pages/UnauthorizedPage.tsx
-- [ ] AppSidebar component
-- [ ] AdminSidebar component
-- [ ] Complete src/router/index.tsx (fix imports, lazy)
-- [ ] Update src/App.tsx to RouterProvider
+## Current Tasks
+- [x] 1. Fix src/router/index.tsx (lazy definition, comment missing routes)
+- [x] 2. Create src/components/ui/Button.tsx
+- [x] 3. Create src/components/ui/Badge.tsx
+- [x] 4. Create src/components/ui/index.ts
+- [x] 5. Create src/components/home/HeroSection.tsx
+- [x] 6. Create src/components/home/DemoSection.tsx
+- [x] 7. Create src/components/home/FeaturesSection.tsx
+- [x] 8. Create src/components/home/SocialProofSection.tsx
+- [x] 9. Create src/components/home/PricingTeaser.tsx
+- [x] 10. Create src/components/home/CTASection.tsx
+- [x] 11. Create/fix src/components/home/index.ts (named exports)
+- [x] 12. Fix pages/HomePage.tsx imports to match router paths
+- [x] 13. execute `npm run dev` and verify checks
+- [ ] 14. git add . ; git commit -m "section 05: homepage - hero, demo, features, pricing teaser, CTA" ; git push origin main
+
+**Status:** Homepage TS errors fixed. Ready for dev server test.
+
+Current: main branch clean
 
