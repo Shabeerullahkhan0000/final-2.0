@@ -1,6 +1,6 @@
 import { createBrowserRouter, type RouteObject } from 'react-router-dom';
 import { Suspense } from 'react';
-const lazy = (loader: () => Promise<any>) => loader;
+const lazy = React.lazy;
 
 const PublicLayout = lazy(() => import('../layouts/PublicLayout'));
 const AppLayout = lazy(() => import('../layouts/AppLayout'));
